@@ -1,0 +1,348 @@
+* {
+  box-sizing: border-box;
+}
+/* Animacion de intercion con algun boton*/
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  margin: 0;
+}
+
+h1 {
+  font-size: 3.5em;
+}
+h2 {
+  font-size: 2.7em;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-size: 1.25em;
+}
+ul {
+  list-style: none;
+}
+li {
+  font-size: 1.25em;
+}
+
+/*Aqui empieza el style para mobile*/
+button {
+  font-size: 1.2em; /* tamaño del boton */
+  font-weight: bold; /*Negrilla para las letras del boton */
+  padding: 10px 30px; /* Tamaño del relleno del boton */
+  border-radius: 10px; /*radio del boton circular */
+  border: 4px solid rgba(48, 36, 41, 0.5); /* los border y el color del mismo */
+  box-shadow: 2px 2px 8px rgba(48, 36, 41, 0.5); /* sobras y color del border*/
+  color: white; /* color de las letras */
+  background-color: rgb(17, 161, 12); /* color del boton*/
+}
+/*Esta parte sirbe para al momento de pasar el mouse se cambie el color*/
+button:hover {
+  background-color: rgb(15, 131, 11);
+}
+
+.container {
+  max-width: 1400px;
+  margin: auto;
+}
+
+.color-acento {
+  color: rgb(17, 161, 12);
+}
+
+header {
+  background-color: rgb(230, 230, 230);
+}
+
+header .logo {
+  margin: 0;
+  padding: 25px 30px;
+  font-weight: bold;
+  color: rgb(17, 161, 12);
+  font-size: 1.6em;
+}
+
+header .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-bottom: 25px;
+}
+
+header a {
+  padding: 5px 12px;
+  text-decoration: none;
+  font-weight: bold;
+  color: black;
+}
+
+header a:hover {
+  color: rgb(15, 131, 11);
+}
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 90vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("media/hero.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+#hero h1 {
+  color: white;
+}
+
+#hero button {
+  font-size: 1.75em;
+}
+/*linear-gradient es muy importante para que el texto de una imagen se vea*/
+
+#quienes-somos .container {
+  text-align: center;
+  padding: 200px 12px;
+}
+
+#rutas-de-lectura {
+  background-color: rgb(29, 29, 29);
+  color: white;
+  text-align: center;
+}
+
+#rutas-de-lectura .container {
+  padding: 200x 10px;
+}
+
+#rutas-de-lectura p {
+  display: none;
+}
+
+#rutas-de-lectura h2 {
+  margin-top: 0%;
+  font-size: 50px;
+}
+#rutas-de-lectura .carta {
+  background-size: cover;
+  background-position: center center;
+  padding: 50px;
+  margin: 20px;
+  border-radius: 18px;
+}
+
+.carta:first-child {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("media/principiante.jpg");
+}
+.carta:nth-child(2) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("media/intermedio.jpg");
+}
+.carta:nth-child(3) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("media/avanzado.jpg");
+}
+
+#caracteristicas {
+  background-color: white;
+}
+#caracteristicas .container {
+  text-align: center;
+  padding: 200px 10px;
+}
+
+#caracteristicas li {
+  margin: 15 px 0px;
+  font-weight: bold;
+}
+
+#final {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: black;
+  height: 80vh;
+  color: white;
+}
+
+#final h2 {
+  font-size: 9vw;
+}
+#final button {
+  font-size: 4vw;
+}
+
+footer {
+  background-color: rgb(230, 230, 230);
+}
+
+footer p {
+  margin: 0;
+  color: rgb(129, 125, 125);
+  padding: 12px;
+}
+footer .container {
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+/*Aqui termina el style para mobile*/
+
+/*Colocarle a las rutas de aprendizaje el 90 vp */
+
+/*Esta parte de abajo es la condicion de cuando la pantalla supera
+los 720px se aplicaran los siguientes style*/
+
+@media screen and (min-width: 880px) {
+  header {
+    position: fixed;
+    width: 100%;
+  }
+  header .container {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  header nav {
+    flex-direction: row;
+    padding-bottom: 0;
+    padding-right: 30px;
+  }
+  #quienes-somos .container {
+    display: flex;
+    justify-content: space-evenly;
+  }
+  #quienes-somos .texto {
+    width: 50%;
+    text-align: initial;
+    padding-left: 30px;
+    max-width: 600px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  #quienes-somos h2 {
+    margin-top: 0px;
+  }
+
+  #quienes-somos .img-container {
+    background-image: url(Media/quienes-somos.jpg);
+    background-size: cover;
+    background-position: center center;
+    height: 500px;
+    width: 600px;
+  }
+
+  #rutas-de-lectura .rutas {
+    display: flex;
+    justify-content: center;
+  }
+
+  #rutas-de-lectura p {
+    display: block;
+    margin-bottom: 30px;
+  }
+
+  #rutas-de-lectura h3 {
+    margin-top: 0;
+  }
+  #rutas-de-lectura h2 {
+    font-size: 4em;
+  }
+  #rutas-de-lectura .carta {
+    padding: 50px;
+    background-size: 100% 150px;
+    background-repeat: no-repeat;
+    background-position-y: 0;
+    background-color: rgba(50, 50, 50, 0.5);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  .carta:first-child {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("media/principiante-cortado.jpg");
+  }
+  .carta:nth-child(2) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("media/intermedio-cortado.jpg");
+  }
+  .carta:nth-child(3) {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+      ),
+      url("media/avanzado-cortado.jpg");
+  }
+
+  #caracteristicas {
+    background-image: url(Media/final.jpg);
+    background-repeat: no-repeat;
+    background-size: 500px 500px;
+    background-position-x: calc(50vw - 10000px) 50px;
+  }
+  #caracteristicas .container {
+    text-align: initial;
+  }
+
+  #caracteristicas ul {
+    margin-left: 100px;
+  }
+  #final h2 {
+    font-size: 5em;
+  }
+  #final button {
+    font-size: 2em;
+  }
+  #final .container {
+    justify-content: flex-end;
+  }
+}
+
+@media screen and (min-width: 720px) {
+  #caracteristicas {
+    background-position-x: calc(100vw - 500px);
+  }
+}
